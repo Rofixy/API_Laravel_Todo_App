@@ -24,3 +24,9 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('/login', 'login');
     Route::post('/logout', 'logout')->middleware('auth:sanctum');
 });
+
+use App\Http\Controllers\TaskController;
+
+Route::apiResource('tasks', TaskController::class);
+
+
